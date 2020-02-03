@@ -1,20 +1,24 @@
 {
   "compilerOptions": {
     "jsx": "react",
+    "sourceMap": true,
     "baseUrl": "./",
     "paths": {
       "@components/*": [
         "./src/components/*"
       ],
       "@img/*": [
-        "./assets/img/*"
+        "./src/assets/img/*"
       ],
       "@fonts/*": [
-        "./assets/fonts/*"
+        "./src/assets/fonts/*"
       ],
       "@pages/*": [
         "./src/pages/*"
-      ]
+      ],
+      "@/*": [
+        "./src/*"
+      ],
     }
   },
   "exclude": [
@@ -22,7 +26,6 @@
     "build"
   ],
   "include": [
-    "./src",
-    "./assets"
+    "./src"
   ]
 }

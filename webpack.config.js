@@ -15,12 +15,13 @@ module.exports = {
   },
   resolve: {
     alias: {
-      '@fonts': path.resolve(__dirname, 'assets/fonts'),
-      '@img': path.resolve(__dirname, 'assets/img'),
-      '@components': path.resolve(__dirname, 'src/components'),
-      '@pages': path.resolve(__dirname, 'src/pages')
+      '@fonts': path.resolve(__dirname, 'src/assets/fonts/'),
+      '@img': path.resolve(__dirname, 'src/assets/img/'),
+      '@components': path.resolve(__dirname, 'src/components/'),
+      '@pages': path.resolve(__dirname, 'src/pages/'),
+      "@": path.resolve(__dirname, "src/")
     },
-    extensions: ['.jsx', '.js', '.wasm', '.mjs', '.json']
+    extensions: ['.jsx', '.js', '.wasm', '.mjs', '.json', '.svg', '.png', '.jpg']
   },
   module: {
     rules: [
@@ -43,6 +44,10 @@ module.exports = {
       {
         test: /\.html$/i,
         loader: 'html-loader'
+      },
+      {
+        test: /\.mp4$/i,
+        loader: "file-loader"
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
